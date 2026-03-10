@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1760px;
+  margin: 0 auto;
+
+  @media (max-width: 1800px) {
+    max-width: 1440px;
+  }
+  @media (max-width: 1480px) {
+    max-width: 1280px;
+  }
+  @media (max-width: 1320px) {
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+fieldset {
+  border: none;
+}
