@@ -1,2 +1,121 @@
 @use "./colors.scss" as c;
 @use "../styles/mixins.scss" as *;
+
+
+.footer {
+  background: #1E355C;
+
+  &__top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+  }
+
+  &__download {
+    margin-right: auto;
+
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #FFFFFF;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 37.17px;
+  }
+
+  &__item {
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #FFFFFF;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 180px;
+  }
+
+  &__phone,
+  &__mail {
+    a {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 18px;
+      color: #FFFFFF;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social {
+    .social-list {
+      .social-item {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+
+    p {
+      max-width: 273.33px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 18px;
+      color: #FFFFFF;
+    }
+  }
+
+  .copyright {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+}

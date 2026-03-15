@@ -13,29 +13,36 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img class="lazy" data-src="assets/images/hero-slide.jpg" alt="">
-                        <div class="slide__content">
-                            <h2>Перголы</h2>
-                            <p>Компания Murex изготавливает перголы на заказ.
-                                При производстве мы учитываем все особенности участка,
-                                а также пожелания заказчика к дизайну изделия. В нашем
-                                каталоге представлены готовые варианты конструкций, которые можно приобрести сразу.</p>
-                            <a href="#" class="hero__link color-btn">В каталог</a>
+                        <div class="slide-content">
+                                <div class="container">
+                                    <h2>Перголы</h2>
+                                    <p>Компания Murex изготавливает перголы на заказ.
+                                        При производстве мы учитываем все особенности участка,
+                                        а также пожелания заказчика к дизайну изделия. В нашем
+                                        каталоге представлены готовые варианты конструкций, которые можно приобрести сразу.</p>
+                                    <a href="#" class="hero__link color-btn">В каталог</a>
+                                </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <img class="lazy" data-src="assets/images/hero-slide.jpg" alt="">
-                        <div class="slide__content">
-                            <h2>Перголы</h2>
-                            <p>Компания Murex изготавливает перголы на заказ.
-                                При производстве мы учитываем все особенности участка,
-                                а также пожелания заказчика к дизайну изделия. В нашем
-                                каталоге представлены готовые варианты конструкций, которые можно приобрести сразу.</p>
-                            <a href="#" class="hero__link color-btn">В каталог</a>
+                        <div class="slide-content">
+                            <div class="container">
+                                <h2>Перголы2</h2>
+                                <p>Компания Murex изготавливает перголы на заказ.
+                                    При производстве мы учитываем все особенности участка,
+                                    а также пожелания заказчика к дизайну изделия. В нашем
+                                    каталоге представлены готовые варианты конструкций, которые можно приобрести сразу.</p>
+                                <a href="#" class="hero__link color-btn">В каталог</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="swiper-pagination"></div>
+
+                <div class="swiper-pagination">
+                </div>
+
 
                 <div class="swiper-button-prev">
                     <include src="assets/svg/slider-arrow-prev.html"></include>
@@ -46,12 +53,13 @@
             </div>
         </div>
     </section>
+    <div class="main-bg">
     <section class="main-catalog">
         <div class="container">
             <ul class="main-catalog__list">
-                <li class="main-catalog__item norm">
+                <li class="main-catalog__item">
                     <img class="lazy" data-src="assets/images/main-catalog1.jpg" alt="">
-                    <a href="#">Перголы</a>
+                    <h2><a href="#">Перголы</a></h2>
                     <ul class="main-catalog__sublist">
                         <li class="main-catalog__subitem">
                             <a href="#">Крепление к фасаду</a>
@@ -67,9 +75,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="main-catalog__item norm">
+                <li class="main-catalog__item">
                     <img class="lazy" data-src="assets/images/main-catalog2.jpg" alt="">
-                    <a href="#">Маркизы</a>
+                    <h2><a href="#">Маркизы</a></h2>
                     <ul class="main-catalog__sublist">
                         <li class="main-catalog__subitem">
                             <a href="#">Горизонтальные</a>
@@ -84,7 +92,7 @@
                 </li>
                 <li class="main-catalog__item little">
                     <img class="lazy" data-src="assets/images/main-catalog3.jpg" alt="">
-                    <a href="#">ZIP-экраны</a>
+                    <h2><a href="#">ZIP-экраны</a></h2>
                     <ul class="main-catalog__sublist">
                         <li class="main-catalog__subitem">
                             <a href="#">ZIP-экраны</a>
@@ -93,7 +101,7 @@
                 </li>
                 <li class="main-catalog__item big">
                     <img class="lazy" data-src="assets/images/main-catalog4.jpg" alt="">
-                    <a href="#">Системы остекления</a>
+                    <h2><a href="#">Системы остекления</a></h2>
                     <ul class="main-catalog__sublist">
                         <li class="main-catalog__subitem">
                             <a href="#">Гильотинные</a>
@@ -111,12 +119,6 @@
     </section>
     <section class="main-about">
         <div class="container">
-            <div class="main-about__link">
-                <a href="#">
-                    <span>Подробнее</span>
-                    <include src="assets/svg/btn-arrow.html"></include>
-                </a>
-            </div>
             <div class="main-about__text">
                 <h2>О компании</h2>
                 <p>Создавая Murex, мы преследовали простую и в то же время сложную задачу.
@@ -129,6 +131,12 @@
                     потребности самого взыскательного клиента. Мы уверены, что, выбрав Murex, вы обретете надежного
                     партнера на долгие годы.</p>
                 <p>Murex — выбор есть!</p>
+            </div>
+            <div class="main-about__link">
+                <a href="#">
+                    <span>Подробнее</span>
+                    <include src="assets/svg/btn-arrow.html"></include>
+                </a>
             </div>
         </div>
     </section>
@@ -162,6 +170,7 @@
             </ul>
         </div>
     </section>
+    </div>
     <section class="main-form">
         <div class="container">
            <h2>Мы перезвоним</h2>
@@ -174,8 +183,6 @@
                     <label>
                         <input type="text" name="name" placeholder="Как вас зовут ?">
                     </label>
-                </fieldset>
-                <fieldset>
                     <button class="submit-btn color-btn">
                         Оставить заявку
                     </button>
@@ -218,12 +225,12 @@
                         <img class="lazy" data-src="assets/images/partners2.png" alt="">
                     </div>
                 </div>
-                <div class="swiper-button-prev">
-                    <include src="assets/svg/slider-arrow-prev.html"></include>
-                </div>
-                <div class="swiper-button-next">
-                    <include src="assets/svg/slider-arrow-next.html"></include>
-                </div>
+            </div>
+            <div class="swiper-button-prev">
+                <include src="assets/svg/slider-arrow-prev.html"></include>
+            </div>
+            <div class="swiper-button-next">
+                <include src="assets/svg/slider-arrow-next.html"></include>
             </div>
         </div>
     </section>
