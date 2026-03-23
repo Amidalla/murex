@@ -32,45 +32,122 @@ export function SlidersInit() {
     const partnersSlider = document.querySelector('.partners-slider');
 
     if (partnersSlider) {
-        new Swiper(partnersSlider, {
+        const partnersSwiper = new Swiper(partnersSlider, {
             modules: [Navigation, Autoplay],
             slidesPerView: 6,
             spaceBetween: 65.89,
             loop: true,
             speed: 800,
+            autoHeight: false,
 
             navigation: {
-                nextEl: '.main-partners .swiper-button-next', // Уточненный селектор
-                prevEl: '.main-partners .swiper-button-prev', // Уточненный селектор
+                nextEl: '.main-partners .swiper-button-next',
+                prevEl: '.main-partners .swiper-button-prev',
             },
 
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
 
             breakpoints: {
-                1200: {
+                1400: {
                     slidesPerView: 6,
                     spaceBetween: 65.89,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        enabled: true,
+                    },
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        enabled: true,
+                    },
                 },
                 992: {
                     slidesPerView: 4,
-                    spaceBetween: 40,
+                    spaceBetween: 20,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        enabled: true,
+                    },
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: 30,
+                    spaceBetween: 20,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        enabled: true,
+                    },
                 },
                 576: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+                    slidesPerView: 2.5,
+                    spaceBetween: 30,
+                    autoplay: false,
+                    centeredSlides: false,
+                    loop: false,
+                    navigation: {
+                        enabled: false, // Отключаем навигацию на мобильных
+                    },
                 },
                 0: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
+                    slidesPerView: 2.5,
+                    spaceBetween: 30,
+                    autoplay: false,
+                    centeredSlides: false,
+                    loop: false,
+                    navigation: {
+                        enabled: false, // Отключаем навигацию на мобильных
+                    },
+                }
+            },
+
+            on: {
+                init: function() {
+                    setTimeout(() => {
+                        this.update();
+                    }, 100);
+                },
+                resize: function() {
+                    this.update();
                 }
             }
+        });
+
+        setTimeout(() => {
+            if (partnersSwiper) {
+                partnersSwiper.update();
+            }
+        }, 300);
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (partnersSwiper) {
+                    partnersSwiper.update();
+                }
+            }, 250);
         });
     }
 }

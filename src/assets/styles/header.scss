@@ -5,6 +5,10 @@
   &__inner {
     padding-left: 40px;
     padding-right: 40px;
+
+    @media (max-width: 1250px) {
+      background: rgba(30, 53, 92, 0.05);
+    }
   }
 
   &__top {
@@ -12,18 +16,38 @@
     padding-top: 30px;
     padding-bottom: 30px;
     align-items: center;
+
+    @media (max-width: 1250px) {
+      padding-top: 20px;
+      padding-bottom: 15px;
+    }
   }
 
   &__logo {
     margin-right:  auto;
+
+    @media (max-width: 1250px) {
+
+      svg {
+        max-width: 120px;
+      }
+    }
   }
 
   &__buttons {
       margin-left: 60px;
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
   }
 
   &__social {
     margin-left: 30px;
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
   }
 
   &__mail,
@@ -31,6 +55,10 @@
     display: flex;
     flex-direction: column;
     margin-left: 30px;
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
 
     a {
       font-size: 16px;
@@ -51,6 +79,17 @@
     }
   }
 
+  &__burger {
+    display: none;
+
+    @media (max-width: 1250px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+    }
+  }
+
   &__bottom {
     display: flex;
     align-items: center;
@@ -58,6 +97,10 @@
     margin-left: -40px;
     margin-right: -40px;
     padding: 20px 40px;
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
   }
 
   &__download {
@@ -68,6 +111,10 @@
     display: flex;
     align-items: center;
     gap: 68.83px;
+
+    @media (max-width: 1400px) {
+      gap: 20px;
+    }
   }
 
   &__item {
@@ -129,6 +176,12 @@
 }
 
 .search {
+
+  @media (max-width: 1250px) {
+    display: none;
+  }
+
+
   &__inner {
     display: flex;
     align-items: center;
@@ -157,6 +210,10 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
+
+    @media (max-width: 1400px) {
+      width: 280px;
+    }
 
     &::-webkit-search-cancel-button {
     -webkit-appearance: none;

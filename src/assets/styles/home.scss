@@ -3,16 +3,13 @@
 
 .hero {
 
-  &__media {
-    margin-bottom: 60px;
-  }
   .hero-slider {
-    max-height: 500px;
+    max-height: 650px;
     overflow: hidden;
     position: relative;
 
        .swiper-wrapper {
-         max-height: 500px;
+         max-height: 650px;
        }
     
        .swiper-pagination {
@@ -23,17 +20,47 @@
          transform: translateX(-50%);
          bottom: 40px;
 
+         @media (max-width: 1600px) {
+          max-width: 1280px;
+         }
+
+         @media (max-width: 1500px) {
+           max-width: 1100px;
+         }
+
+         @media (max-width: 1250px) {
+           max-width: 100%;
+           left: 0;
+           transform: none;
+         }
+
          .swiper-pagination-bullet {
            width: 30px;
            height: 3px;
            border-radius: 2px;
            background: rgba(255, 255, 255, 1);
+
+           &:first-child {
+             margin-left: 20px;
+           }
          }
        }
 
       .swiper-slide {
         border-top: 2px solid #F1511B;
         position: relative;
+        height: 650px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+
+        @media (max-width: 1250px) {
+          height: 500px;
+        }
 
         .slide-content {
           position: absolute;
@@ -41,11 +68,19 @@
           left: 0;
           right: 0;
 
+          @media (max-width: 1250px) {
+            top: 103px;
+          }
+
           h2 {
             font-size: 48px;
             font-weight: 500;
             color: #FFFFFF;
             margin-bottom: 10px;
+
+            @media (max-width: 450px) {
+              font-size: 36px;
+            }
           }
 
           p {
@@ -60,10 +95,18 @@
       }
     .swiper-button-prev {
       @include swiper-arrow-prev;
+
+      @media (max-width: 1250px) {
+        display: none;
+      }
     }
 
     .swiper-button-next {
       @include swiper-arrow-next;
+
+      @media (max-width: 1250px) {
+        display: none;
+      }
     }
   }
 }
@@ -71,10 +114,25 @@
 .main-catalog {
   padding-bottom: 80px;
 
+  @media (max-width: 1250px) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: 450px) {
+    padding-bottom: 0;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
+    @media (max-width: 1250px) {
+      flex-direction: column;
+      gap: 4px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
 
   &__item {
@@ -83,6 +141,14 @@
     position: relative;
     transition: all 0.3s ease;
     overflow: hidden;
+
+    @media (max-width: 1250px) {
+      width: 100%;
+    }
+
+    @media (max-width: 450px) {
+      height: 220px;
+    }
 
     &:first-child {
       border-left: 2px solid #F1511B;
@@ -109,10 +175,20 @@
 
     &.little {
       width: calc(30% - 10px);
+
+
+      @media (max-width: 1250px) {
+        width: 100%;
+      }
     }
 
     &.big {
       width: calc(70% - 10px);
+
+
+      @media (max-width: 1250px) {
+        width: 100%;
+      }
     }
 
     & > h2  {
@@ -122,10 +198,18 @@
       left: 40px;
       transition: all 0.3s ease;
 
+      @media (max-width: 1250px) {
+        left: 20px;
+      }
+
       a {
         font-size: 36px;
         font-weight: 500;
         color: #FFFFFF;
+
+        @media (max-width: 450px) {
+          font-size: 24px;
+        }
       }
     }
 
@@ -147,6 +231,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    @media (max-width: 1250px) {
+      left: 20px;
+    }
 
     li {
       background: rgba(255, 255, 255, 0.1);
@@ -170,17 +258,50 @@
 }
 
 .main-bg {
- padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url("../images/main-page-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 100% bottom;
+
+  @media (max-width: 1250px) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: 450px) {
+    background-image: none;
+  }
 }
 
 
 .main-about {
 
+  @media (max-width: 450px) {
+    padding-top: 30px;
+    background-image: url("../images/main-page-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center bottom;
+    padding-bottom: 94px;
+  }
+
   .container {
      position: relative;
      padding-left: 108px;
      padding-bottom: 80px;
-     margin-bottom:119px;
+     margin-bottom: 119px;
+
+    @media (max-width: 1250px) {
+      padding-left: 0;
+      padding-bottom: 60px;
+      margin-bottom: 94px;
+    }
+
+    @media (max-width: 450px) {
+      margin-bottom: 0;
+    }
   }
 
   &__link {
@@ -192,6 +313,18 @@
     background: url("../images/main-about-link.svg") no-repeat;
     background-size: contain;
 
+    @media (max-width: 1250px) {
+      width: 170px;
+      height: 40px;
+      background: url("../images/main-about-link-mobile.svg") no-repeat;
+      background-size: contain;
+      left: -20px;
+    }
+
+    @media (max-width: 450px) {
+      bottom: 6px;
+    }
+
     a {
       position: absolute;
       bottom: 20px;
@@ -202,6 +335,11 @@
       font-size: 14px;
       font-weight: 500;
       color: #FFFFFF;
+
+      @media (max-width: 1250px) {
+        bottom: 7px;
+        left: 28px;
+      }
 
       svg {
         transition: all 0.3s ease;
@@ -239,6 +377,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 80px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 450px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -264,6 +416,11 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  @media (max-width: 1250px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   h2 {
     color: #1E355C;
     margin-bottom: 10px;
@@ -283,10 +440,23 @@
   flex-direction: column;
   gap: 40px;
 
+
+  @media (max-width: 1250px) {
+    max-width: 434.5px;
+  }
+
+  @media (max-width: 485px) {
+    max-width: 100%;
+  }
+
   fieldset {
     &:first-child {
       display: flex;
       gap: 20px;
+
+      @media (max-width: 1250px) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -301,6 +471,11 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
+
+    @media (max-width: 485px) {
+      max-width: 100%;
+      width: 100%;
+    }
 
     &:focus {
       transform: translateX(5px);
@@ -333,6 +508,12 @@
     align-items: flex-start;
     gap: 10px;
 
+    @media (max-width: 1250px) {
+      display: inline-block;
+      position: relative;
+      padding-left: 24px;
+    }
+
     a {
       color: #F1511B;
       text-decoration: underline;
@@ -354,6 +535,12 @@
     background: #F1511B;
     margin-top: 2px;
     transition: background-color 0.2s ease;
+
+    @media (max-width: 1250px) {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 
 
@@ -396,12 +583,30 @@
      padding-top: 60px;
      padding-bottom: 80px;
 
+     @media (max-width: 1250px) {
+       padding-top: 30px;
+       padding-bottom: 30px;
+       min-height: 162px;
+     }
+
+     @media (max-width: 576px) {
+       padding-left: 20px;
+     }
+
      .swiper-button-prev {
        @include swiper-arrow-prev;
+
+       @media (max-width: 576px) {
+         display: none;
+       }
      }
 
      .swiper-button-next {
        @include swiper-arrow-next;
+
+       @media (max-width: 576px) {
+         display: none;
+       }
      }
    }
 }
@@ -410,9 +615,21 @@
   max-width: 1695.46px;
   margin: 0 auto;
 
+  @media (max-width: 1800px) {
+    max-width: 90%;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 100%;
+    overflow: visible;
+  }
+
 
   .swiper-wrapper {
     align-items: stretch;
+    @media (max-width: 576px) {
+      transition-timing-function: ease-out;
+    }
   }
 
   .swiper-slide {
@@ -420,6 +637,11 @@
     justify-content: center;
     align-items: center;
     height: auto;
+
+    @media (max-width: 576px) {
+      width: calc((100% - 30px) / 2.5);
+      flex-shrink: 0;
+    }
 
     img {
       max-width: 100%;
