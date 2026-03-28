@@ -85,6 +85,20 @@
   background-size: contain;
   background-position: center;
 
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 100%;
+    color: #1E355C;
+    
+    @media (max-width: 450px) {
+      font-size: 26px;
+    }
+  }
+
+  &.contacts-page {
+    background: none;
+  }
 
   .main-catalog {
     padding-bottom: 60px;

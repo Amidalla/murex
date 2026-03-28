@@ -1,0 +1,65 @@
+@use "./colors.scss" as c;
+@use "../styles/mixins.scss" as *;
+
+.contacts {
+  padding-bottom: 60px;
+
+  @media (max-width: 1250px) {
+    padding-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: #1E355C;
+
+      a {
+        color: #F1511B;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      br {
+        display: none;
+
+        @media (max-width: 450px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__map {
+    iframe {
+      width: 100%;
+      
+      @media (max-width: 450px) {
+        max-height: 460px;
+      }
+    }
+  }
+}

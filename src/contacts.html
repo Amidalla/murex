@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<include src="layout/head.html"></include>
+<body>
+<include src="layout/header.html"></include>
+<main class="inside-page contacts-page">
+    <section class="page-header contacts-page">
+        <div class="page-header__inner">
+            <div class="container">
+                <div class="breadcrumb">
+                    <nav class="breadcrumb__inner">
+                        <ul class="breadcrumb__list">
+                            <li class="breadcrumb__item">
+                                <a href="#" class="breadcrumb__link">Главная</a>
+                            </li>
+                            <li class="breadcrumb__item active">
+                                <span>Контакты</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="main-title">
+                    <h1>Контакты</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts__inner">
+                <div class="contacts__item">
+                    <div class="contacts__text">
+                       <h3>Офис в Москве</h3>
+                        <span>Московская обл., г. Балашиха, мкр. Саввино, ул. Саввинская 10</span>
+                        <span>Пн - Пт с 10:00 до 19:00,<br> тел.: <a href="tel:+74997148886">+7 (499) 714-88-86</a></span>
+                        <span>Сб - Вс только тел.: <a href="tel:+79052223455">+7 (905) 222-34-55</a></span>
+                        <span>Эл. почта: <a href="mailto:msk@murex.pro">msk@murex.pro</a></span>
+                    </div>
+                    <div class="contacts__map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c080e107b2d072ffbfaa8df55cecf94494120c19b39e02686e82ab2dc02bd47&amp;source=constructor" width="1060" height="476" frameborder="0"></iframe></div>
+                </div>
+                <div class="contacts__item">
+                    <div class="contacts__text">
+                        <h3>Офис в Санкт-Петербурге и самый большой шоу-рум в России</h3>
+                        <span>Санкт-Петербург, ул. Уральская, д. 1, корп. 2, БЦ АкадемиА, офис 356</span>
+                        <span>Пн - Пт с 10:00 до 19:00, тел.: <br><a href="tel:+78123094715">+7 (812) 309-47-15</a></span>
+                        <span>Сб - Вс только тел.: <a href="tel:+79052223455">+7 (905) 222-34-55</a></span>
+                        <span>Эл. почта: <a href="mailto:spb@murex.pro">spb@murex.pro</a></span>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa575fbe2e969848aa903efa95190ef71a3fe5014415f08efdbad347906cc604b&amp;source=constructor" width="1060" height="476" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="contacts__item">
+                    <div class="contacts__text">
+                        <h3>Реквизиты</h3>
+                        <span>Полное название: ООО “АВИНГ”</span>
+                        <span>Юридический адрес: 143985, Московская обл, г Балашиха, мкр Саввино, ул Саввинская, д 10</span>
+                        <span>ИНН: 5012085791</span>
+                        <span>КПП: 501201001</span>
+                        <span>ОГРН: 1145012004488</span>
+                        <span>ОКПО: 34825031</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-form">
+        <div class="container">
+            <h2>Мы перезвоним</h2>
+            <p>Оставьте заявку и наши менджеры свяжутся с вами в ближайшее время!</p>
+            <form id="call_form" class="form-main">
+                <fieldset>
+                    <label>
+                        <input type="tel" name="tel" placeholder="Телефон" data-phone-input="" required="">
+                    </label>
+                    <label>
+                        <input type="text" name="name" placeholder="Как вас зовут ?">
+                    </label>
+                    <button class="submit-btn color-btn">
+                        Оставить заявку
+                    </button>
+                </fieldset>
+                <fieldset>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="checkbox" required="">
+                        <span>Нажимая кнопку, я принимаю <a href="#">соглашение о конфиденциальности</a> и соглашаюсь с обработкой персональных данных</span>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</main>
+<include src="layout/footer.html"></include>
+<include src="layout/modals.html"></include>
+</body>
+</html>
