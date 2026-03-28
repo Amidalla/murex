@@ -6,6 +6,7 @@ import "../styles/home.scss";
 import "../styles/modals.scss";
 import "../styles/catalog.scss";
 import "../styles/contacts.scss";
+import "../styles/dealers.scss";
 import LazyLoad from "vanilla-lazyload";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
@@ -106,7 +107,7 @@ function initRedStarsInPlaceholders() {
                 left: paddingLeft,
                 top: input.tagName === 'TEXTAREA' ? '15px' : '50%',
                 transform: input.tagName === 'TEXTAREA' ? 'none' : 'translateY(-50%)',
-                color: '#999',
+                color: '#5B5B5B',
                 pointerEvents: 'none',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',

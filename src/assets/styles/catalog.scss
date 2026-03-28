@@ -96,8 +96,12 @@
     }
   }
 
-  &.contacts-page {
+  &.no-bg-page {
     background: none;
+
+    h2 {
+      color: #1E355C;
+    }
   }
 
   .main-catalog {
@@ -214,10 +218,10 @@
       &:nth-child(2).visible-mobile {
         width: calc(30% - 1px);
       }
-      &:nth-child(4).visible-mobile {
+      &:nth-child(3).visible-mobile {
         width: calc(50% - 1px);
       }
-      &:nth-child(5).visible-mobile {
+      &:nth-child(4).visible-mobile {
         width: calc(50% - 1px);
       }
     }
