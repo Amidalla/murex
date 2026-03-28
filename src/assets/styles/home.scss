@@ -198,14 +198,18 @@
       left: 40px;
       transition: all 0.3s ease;
 
+
       @media (max-width: 1250px) {
         left: 20px;
       }
 
       a {
+        display: inline-block;
+        max-width: 440px;
         font-size: 36px;
         font-weight: 500;
         color: #FFFFFF;
+        line-height: 120%;
 
         @media (max-width: 450px) {
           font-size: 24px;
@@ -358,6 +362,10 @@
      h2 {
        color: #1E355C;
        margin-bottom: 40px;
+
+       @media (max-width: 1250px) {
+         margin-bottom: 20px;
+       }
      }
 
     p {
@@ -415,6 +423,27 @@
   background: rgba(30, 53, 92, 0.05);
   padding-top: 60px;
   padding-bottom: 60px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(90deg, #F1511B 0%, rgba(241, 81, 27, 0) 100%);
+  }
+  &::after {
+    bottom: 0;
+    background: linear-gradient(-90deg, #F1511B 0%, rgba(241, 81, 27, 0) 100%);
+  }
+
+
 
   @media (max-width: 1250px) {
     padding-top: 30px;

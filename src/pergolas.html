@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<include src="layout/head.html"></include>
+<body>
+<include src="layout/header.html"></include>
+<main class="inside-page">
+    <section class="page-header contacts-page">
+        <div class="page-header__inner">
+            <div class="container">
+                <div class="breadcrumb">
+                    <nav class="breadcrumb__inner">
+                        <ul class="breadcrumb__list">
+                            <li class="breadcrumb__item">
+                                <a href="#" class="breadcrumb__link">Главная</a>
+                            </li>
+                            <li class="breadcrumb__item">
+                                <a href="#" class="breadcrumb__link">Каталог</a>
+                            </li>
+                            <li class="breadcrumb__item active">
+                                <span>Перголы тентовые</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="main-title">
+                    <h1>Тентовые перголы</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-catalog">
+        <div class="container">
+            <ul class="main-catalog__list">
+                <li class="main-catalog__item">
+                    <img class="lazy" data-src="assets/images/main-catalog8.jpg" alt="">
+                    <h2><a href="#">Крепление к фасаду</a></h2>
+                </li>
+                <li class="main-catalog__item">
+                    <img class="lazy" data-src="assets/images/main-catalog9.jpg" alt="">
+                    <h2><a href="#">На самонесущем каркасе</a></h2>
+                </li>
+                <li class="main-catalog__item little">
+                    <img class="lazy" data-src="assets/images/main-catalog10.jpg" alt="">
+                    <h2><a href="#">Навес на тягах</a></h2>
+                </li>
+                <li class="main-catalog__item little">
+                    <img class="lazy" data-src="assets/images/main-catalog11.jpg" alt="">
+                    <h2><a href="#">Подвесные к имеющемуся каркасу</a></h2>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container">
+            <h2>Применение тентовых пергол</h2>
+            <p>Тентовая пергола - это уникальная конструкция, которая сочетает в себе функциональность и эстетику.
+                Основная задача перголы заключается в защите от прямых солнечных лучей, дождя, ветра. В данном
+                разделе представлены перголы с креплением к стене (фасаду). Используются как для частных домов
+                (квартир), так и для ресторанов, отелей, офисов, общественных пространств. В частности, оснастив
+                перголой ваше заведение, вы можете увеличить количество посадочных мест и повысить его
+                привлекательность в глазах ваших гостей.</p>
+            <p>Установка перголы на террасе частного дома (квартиры) позволит комфортно проводить время на террасе,
+                особенно, если пергола дополняется вертикальными маркизами или остеклением, которое защитит
+                вас от ветра, осадков и лишних взглядов. </p>
+        </div>
+    </section>
+    <section class="decor-images">
+        <ul class="decor-images__list">
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images1-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images1.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images2-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images2.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item">
+                <img class="lazy"  data-src="assets/images/decor-images3.jpg">
+            </li>
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images4-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images4.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images5-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images5.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item">
+                <img class="lazy"  data-src="assets/images/decor-images7.jpg">
+            </li>
+            <li class="decor-images__item">
+                <img class="lazy"  data-src="assets/images/decor-images8.jpg">
+            </li>
+        </ul>
+    </section>
+    <section class="main-form">
+        <div class="container">
+            <h2>Мы перезвоним</h2>
+            <p>Оставьте заявку и наши менджеры свяжутся с вами в ближайшее время!</p>
+            <form id="call_form" class="form-main">
+                <fieldset>
+                    <label>
+                        <input type="tel" name="tel" placeholder="Телефон" data-phone-input="" required="">
+                    </label>
+                    <label>
+                        <input type="text" name="name" placeholder="Как вас зовут ?">
+                    </label>
+                    <button class="submit-btn color-btn">
+                        Оставить заявку
+                    </button>
+                </fieldset>
+                <fieldset>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="checkbox" required="">
+                        <span>Нажимая кнопку, я принимаю <a href="#">соглашение о конфиденциальности</a> и соглашаюсь с обработкой персональных данных</span>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</main>
+<include src="layout/footer.html"></include>
+<include src="layout/modals.html"></include>
+</body>
+</html>

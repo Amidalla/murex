@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<include src="layout/head.html"></include>
+<body>
+<include src="layout/header.html"></include>
+<main class="inside-page">
+    <section class="page-header contacts-page">
+        <div class="page-header__inner">
+            <div class="container">
+                <div class="breadcrumb">
+                    <nav class="breadcrumb__inner">
+                        <ul class="breadcrumb__list">
+                            <li class="breadcrumb__item">
+                                <a href="#" class="breadcrumb__link">Главная</a>
+                            </li>
+                            <li class="breadcrumb__item">
+                                <a href="#" class="breadcrumb__link">Каталог</a>
+                            </li>
+                            <li class="breadcrumb__item active">
+                                <span>Маркизы</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="main-title">
+                    <h1>Маркизы</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-catalog">
+        <div class="container">
+            <ul class="main-catalog__list">
+                <li class="main-catalog__item">
+                    <img class="lazy" data-src="assets/images/main-catalog5.jpg" alt="">
+                    <h2><a href="#">Горизонтальные</a></h2>
+                    <ul class="main-catalog__sublist">
+                        <li class="main-catalog__subitem">
+                            <a href="#">Открытого типа</a>
+                        </li>
+                        <li class="main-catalog__subitem">
+                            <a href="#">Кассетные</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main-catalog__item">
+                    <img class="lazy" data-src="assets/images/main-catalog6.jpg" alt="">
+                    <h2><a href="#">Проекционные</a></h2>
+                </li>
+                <li class="main-catalog__item little">
+                    <img class="lazy" data-src="assets/images/main-catalog7.jpg" alt="">
+                    <h2><a href="#">Для зимних садов</a></h2>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container">
+            <h2>Применение маркиз</h2>
+            <p>это современное решение для создания комфортного пространства на открытом воздухе. Они обеспечивают
+                защиту от солнца, дождя и ветра, при этом украшая фасад здания. Такие конструкции становятся всё
+                более популярными благодаря своей практичности, эстетике и долговечности</p>
+            <p>это современное решение для создания комфортного пространства на открытом воздухе. Они обеспечивают
+                защиту от солнца, дождя и ветра, при этом украшая фасад здания. Такие конструкции становятся всё
+                более популярными благодаря своей практичности, эстетике и долговечности.</p>
+        </div>
+    </section>
+    <section class="decor-images">
+        <ul class="decor-images__list">
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images1-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images1.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images2-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images2.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item">
+                <img class="lazy"  data-src="assets/images/decor-images3.jpg">
+            </li>
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images4-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images4.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item visible-mobile">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="assets/images/decor-images5-mob.jpg">
+                    <img class="lazy"  data-src="assets/images/decor-images5.jpg">
+                </picture>
+            </li>
+            <li class="decor-images__item">
+                <img class="lazy"  data-src="assets/images/decor-images7.jpg">
+            </li>
+            <li class="decor-images__item">
+                <img class="lazy"  data-src="assets/images/decor-images8.jpg">
+            </li>
+        </ul>
+    </section>
+    <section class="main-form">
+        <div class="container">
+            <h2>Мы перезвоним</h2>
+            <p>Оставьте заявку и наши менджеры свяжутся с вами в ближайшее время!</p>
+            <form id="call_form" class="form-main">
+                <fieldset>
+                    <label>
+                        <input type="tel" name="tel" placeholder="Телефон" data-phone-input="" required="">
+                    </label>
+                    <label>
+                        <input type="text" name="name" placeholder="Как вас зовут ?">
+                    </label>
+                    <button class="submit-btn color-btn">
+                        Оставить заявку
+                    </button>
+                </fieldset>
+                <fieldset>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="checkbox" required="">
+                        <span>Нажимая кнопку, я принимаю <a href="#">соглашение о конфиденциальности</a> и соглашаюсь с обработкой персональных данных</span>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</main>
+<include src="layout/footer.html"></include>
+<include src="layout/modals.html"></include>
+</body>
+</html>
