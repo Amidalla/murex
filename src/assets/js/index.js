@@ -8,6 +8,7 @@ import "../styles/catalog.scss";
 import "../styles/contacts.scss";
 import "../styles/dealers.scss";
 import "../styles/manufacture.scss";
+import "../styles/product-card.scss";
 import LazyLoad from "vanilla-lazyload";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
